@@ -7,8 +7,6 @@ from prettytable import DOUBLE_BORDER
 from discord.ext import commands
 from dotenv import load_dotenv
 
-from keepalive import keepalive
-
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
@@ -59,5 +57,4 @@ async def draft(ctx, name1, name2, name3, name4, name5):
     response = '```\n' + x.get_string() + '```'
     await ctx.send(response)
 
-keepalive()
 bot.run(TOKEN)
